@@ -1,4 +1,4 @@
-#' Generate a dosing regimen to be passed to the Rx Studio API
+#' Define a dosing regimen object to be passed to the Rx Studio API
 #' @param dose Dose Amount (number in mg)
 #' @param interval optional Dosing Interval (number in hours)
 #' @param tinf optional Infusion Time (number in hours)
@@ -20,4 +20,30 @@ regimen <- function(dose, interval = NULL, tinf = NULL, type = c('REGIMEN', 'ORA
     Filter(
         Negate(is.null),
         list(DOSE = dose, INTERVAL = interval, TINF = tinf, set = type))
+}
+
+
+#' Define a dose object to be passed to the Rx Studio API
+#' @param datetime date and time of the administered dose
+#' @param dose Dose Amount (number in mg)
+#' @param tinf optional Infusion Time (number in hours)
+#' @param route Route of Administration, e.g. \code{IV} or \code{oral}
+#' @return list
+#' @importFrom checkmate assert_number assert_posixct
+#' @export
+#' @examples
+#' dose(Sys.time(), 2000, 2)
+#' dose(Sys.time(), 2000, route = 'oral')
+dose <- function(datetime, dose, tinf = NULL, route = c('IV', 'oral')) {
+    ## check args
+    route <- match.arg(route)
+    assert_posixct(datetime)
+    assert_number(dose)
+    assert_number(tinf, null.ok = route == 'oral')
+    ## return
+    if (route == 'IV') {
+        list(DATETIME = datetime, DOSE = dose, TINF = tinf, set = 'HISTDOSE')
+    } else {
+        list(DATETIME = datetime, DOSE = dose, set = 'HISTORALDOSE')
+    }
 }

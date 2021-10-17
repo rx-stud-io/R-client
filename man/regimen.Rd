@@ -2,7 +2,7 @@
 % Please edit documentation in R/helpers.R
 \name{regimen}
 \alias{regimen}
-\title{Generate a dosing regimen to be passed to the Rx Studio API}
+\title{Define a dosing regimen object to be passed to the Rx Studio API}
 \usage{
 regimen(dose, interval = NULL, tinf = NULL, type = c("REGIMEN", "ORALREGIMEN"))
 }
@@ -19,7 +19,7 @@ regimen(dose, interval = NULL, tinf = NULL, type = c("REGIMEN", "ORALREGIMEN"))
 list
 }
 \description{
-Generate a dosing regimen to be passed to the Rx Studio API
+Define a dosing regimen object to be passed to the Rx Studio API
 }
 \examples{
 regimen(2000)
