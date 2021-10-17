@@ -21,3 +21,12 @@ test_that('dose', {
         dose(as.POSIXct('2020-09-05'), 2000, 2),
         list(DATETIME = as.POSIXct('2020-09-05'), DOSE = 2000, TINF = 2, set = 'HISTDOSE'))
 })
+
+test_that('concentration', {
+    expect_error(concentration())
+    expect_error(concentration(Sys.time()))
+    expect_error(concentration(Sys.time(), '10'))
+    expect_equal(
+        concentration(as.POSIXct('2020-09-05'), 10),
+        list(DATETIME = as.POSIXct('2020-09-05'), CONCENTRATION = 10, set = 'HISTCONCENTRATION'))
+})

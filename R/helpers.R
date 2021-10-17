@@ -47,3 +47,20 @@ dose <- function(datetime, dose, tinf = NULL, route = c('IV', 'oral')) {
         list(DATETIME = datetime, DOSE = dose, set = 'HISTORALDOSE')
     }
 }
+
+
+#' Define a concentration object to be passed to the Rx Studio API
+#' @param datetime date and time of the administered dose
+#' @param concentration Concentration (number)
+#' @return list
+#' @importFrom checkmate assert_number
+#' @export
+#' @examples
+#' concentration(Sys.time(), 10)
+concentration <- function(datetime, concentration) {
+    ## check args
+    assert_posixct(datetime)
+    assert_number(concentration)
+    ## return
+    list(DATETIME = datetime, CONCENTRATION = concentration, set = 'HISTCONCENTRATION')
+}
