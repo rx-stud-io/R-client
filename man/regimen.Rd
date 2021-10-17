@@ -4,7 +4,7 @@
 \alias{regimen}
 \title{Generate a dosing regimen to be passed to the Rx Studio API}
 \usage{
-regimen(dose, interval = NULL, tinf = NULL, type = "REGIMEN")
+regimen(dose, interval = NULL, tinf = NULL, type = c("REGIMEN", "ORALREGIMEN"))
 }
 \arguments{
 \item{dose}{Dose Amount (number in mg)}
