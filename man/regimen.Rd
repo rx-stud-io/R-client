@@ -21,3 +21,8 @@ list
 \description{
 Generate a dosing regimen to be passed to the Rx Studio API
 }
+\examples{
+regimen(2000)
+regimen(2000, 8, 2)
+regimen(2000, 12, type = 'ORALREGIMEN')
+}

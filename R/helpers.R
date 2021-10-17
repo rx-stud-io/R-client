@@ -5,8 +5,12 @@
 #' @param type Regimen type, e.g. \code{REGIMEN} or \code{ORALREGIMEN}
 #' @return list
 #' @export
+#' @examples
+#' regimen(2000)
+#' regimen(2000, 8, 2)
+#' regimen(2000, 12, type = 'ORALREGIMEN')
 regimen <- function(dose, interval = NULL, tinf = NULL, type = 'REGIMEN') {
     Filter(
         Negate(is.null),
-        list(DOSE = dose, INTERVAL = interval, TINF = tinf, set = 'REGIMEN'))
+        list(DOSE = dose, INTERVAL = interval, TINF = tinf, set = type))
 }
