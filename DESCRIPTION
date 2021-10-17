@@ -1,0 +1,14 @@
+Type: Package
+Package: RxStudio
+Authors@R: c(person("Gergely", "Daróczi", email = "daroczig@rx.studio", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3149-8537")))
+Title: Client to Rx Studio
+Description: R client to the Rx Studio APIs.
+Version: 1.0
+Date: 2021-11-09
+URL: https://github.com/rx-stud-io/R-client
+Language: en-US
+Encoding: UTF-8
+License: AGPL-3
+Imports:
+    httr
+RoxygenNote: 7.1.1
