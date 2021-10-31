@@ -1,0 +1,155 @@
+#' Amikacin » Empiric » Cmin & Cmax
+#' 
+#' Amikacin » Empiric therapy » Total minimum and maximum concentration
+#' 
+#' @section Drug:
+#' Amikacin
+#' 
+#' @section Method:
+#' Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
+#' 
+#' @section PK/PD target:
+#' Minimum and maximum blood plasma concentration (mg/L).
+#' 
+#' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
+#' @param AGE Age. Age of the patient in years. Must be provided as numeric (min. 18, max. 120 year).
+#' @param HEIGHT Height. Height of the patient. Must be provided as numeric (min. 100, max. 250 cm).
+#' @param WEIGHT Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).
+#' @param GENDER Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').
+#' @param MODEL Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Saez Fernandez et al. (2019) - General ward').
+#' @param CREATININE Creatinine. Serum creatinine. Must be provided as numeric (min. 0.01, max. 15 mg/dL).
+#' @param MIC MIC. Minimum Inhibitory Concentration (MIC). Must be provided as numeric (min. 0.01, max. 1024 mg/L).
+#' @param CMIN Minimum concentration target. The PK/PD target can be provided as minimum blood plasma concentration (Cmin). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside%20Dosing%20Guide%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 1, max. 200 mg/L).
+#' @param CMAX Maximum concentration target. The PK/PD target can be provided as maximum blood plasma concentration (Cmax). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside%20Dosing%20Guide%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 1, max. 200 mg/L).
+#' @param LOADINGDOSE Loading dose. Loading dose is desired or not. Must be provided as string ('No' or 'Yes').
+#' @param REGIMENS Dosing Regimens. List of dosing regimens to be used in simulating target attainment, from which the dosing regimen with the smallest absolute difference from the desired target will be automatically selected. Must be provided as list of 1-20 'REGIMEN' values. Use the \code{regimen} helper function to define the REGIMEN values.
+#' 
+#' @examples \dontrun{
+#' simulate_amikacin_mc_emp_cmin_cmax(PATID = "Anonymous", 
+#'     AGE = 65, HEIGHT = 175, 
+#'     WEIGHT = 75, GENDER = "Male", 
+#'     MODEL = "Saez Fernandez et al. (2019) - General ward", 
+#'     CREATININE = 1, MIC = 1, 
+#'     CMIN = 6, CMAX = 20, 
+#'     LOADINGDOSE = "No", 
+#'     REGIMENS = list(list(
+#'         set = "REGIMEN", 
+#'         DOSE = 100, INTERVAL = 6, 
+#'         TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 100, 
+#'             INTERVAL = 8, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 200, 
+#'             INTERVAL = 6, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 200, 
+#'             INTERVAL = 8, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 300, 
+#'             INTERVAL = 6, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 300, 
+#'             INTERVAL = 8, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 300, 
+#'             INTERVAL = 12, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 400, 
+#'             INTERVAL = 6, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 400, 
+#'             INTERVAL = 8, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 400, 
+#'             INTERVAL = 12, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 400, 
+#'             INTERVAL = 24, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 400, 
+#'             INTERVAL = 36, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 500, 
+#'             INTERVAL = 24, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 500, 
+#'             INTERVAL = 36, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 600, 
+#'             INTERVAL = 24, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 600, 
+#'             INTERVAL = 36, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 700, 
+#'             INTERVAL = 24, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 700, 
+#'             INTERVAL = 36, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 800, 
+#'             INTERVAL = 24, 
+#'             TINF = 0.5), 
+#'         list(set = "REGIMEN", 
+#'             DOSE = 800, 
+#'             INTERVAL = 36, 
+#'             TINF = 0.5)))
+#' }
+simulate_amikacin_mc_emp_cmin_cmax <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, CREATININE, MIC, CMIN, CMAX, LOADINGDOSE, REGIMENS) {
+  ## check args
+  assert_string(PATID)
+  assert_number(AGE,
+    lower = 18,
+    upper = 120
+  )
+  assert_number(HEIGHT,
+    lower = 100,
+    upper = 250
+  )
+  assert_number(WEIGHT,
+    lower = 20,
+    upper = 500
+  )
+  assert_string(GENDER)
+  assert_choice(GENDER, c("Male", "Female"))
+  assert_string(MODEL)
+  assert_choice(MODEL, c("Saez Fernandez et al. (2019) - General ward"))
+  assert_number(CREATININE,
+    lower = 0.01,
+    upper = 15
+  )
+  assert_number(MIC,
+    lower = 0.01,
+    upper = 1024
+  )
+  assert_number(CMIN,
+    lower = 1,
+    upper = 200
+  )
+  assert_number(CMAX,
+    lower = 1,
+    upper = 200
+  )
+  assert_string(LOADINGDOSE)
+  assert_choice(LOADINGDOSE, c("No", "Yes"))
+  ## API call
+  simulate("amikacin-mc-emp-cmin-cmax", PATID = PATID, AGE = AGE, HEIGHT = HEIGHT, WEIGHT = WEIGHT, GENDER = GENDER, MODEL = MODEL, CREATININE = CREATININE, MIC = MIC, CMIN = CMIN, CMAX = CMAX, LOADINGDOSE = LOADINGDOSE, REGIMENS = REGIMENS)
+}
