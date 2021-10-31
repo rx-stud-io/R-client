@@ -2,13 +2,13 @@
 #' 
 #' Ceftriaxone » Empiric therapy » Free minimum concentration
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Ceftriaxone
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Free minimum blood plasma concentration (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -63,6 +63,10 @@
 #'             INTERVAL = 24, 
 #'             TINF = 0.5, 
 #'             set = "REGIMEN")))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Garot, Denis et al. (2011): Population pharmacokinetics of ceftriaxone in critically ill septic patients: a reappraisal. In. British Journal of Clinical Pharmacology. https://bpspubs.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2125.2011.04005.x
 #' }
 simulate_ceftriaxone_mc_emp_fcmin <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, MIC, CMIN, LOADINGDOSE, CRCLCAP, REGIMENS) {
   ## check args

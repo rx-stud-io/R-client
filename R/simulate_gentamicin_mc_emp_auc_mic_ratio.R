@@ -2,13 +2,13 @@
 #' 
 #' Gentamicin » Empiric therapy » AUC to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Gentamicin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -111,6 +111,10 @@
 #'             DOSE = 800, 
 #'             INTERVAL = 36, 
 #'             TINF = 0.5)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 #' }
 simulate_gentamicin_mc_emp_auc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, CREATININE, MIC, AUCPERMIC, LOADINGDOSE, REGIMENS) {
   ## check args

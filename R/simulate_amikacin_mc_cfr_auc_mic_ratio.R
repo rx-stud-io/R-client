@@ -2,13 +2,13 @@
 #' 
 #' Amikacin » Cumulative Fraction of Response » AUC to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Amikacin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -41,6 +41,10 @@
 #'         4.8), "MICDISTR-32" = list(
 #'         2.3), "MICDISTR-64" = list(
 #'         5.3)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
 #' }
 simulate_amikacin_mc_cfr_auc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, CREATININE, AUCPERMIC, REGIMENS, MICDISTR) {
   ## check args

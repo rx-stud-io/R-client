@@ -44,21 +44,16 @@ simulate_ceftriaxone_bayesian_ftime_above_mic(
 \description{
 Ceftriaxone » Bayesian adaptive dosing » Percent time of free concentration above MIC
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Ceftriaxone
-}
 
-\section{Method}{
-
+\strong{Method}:
 Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 The percent of time that the free concentration is above the minimum inhibitory concentration.
 }
-
 \examples{
 \dontrun{
 simulate_ceftriaxone_bayesian_ftime_above_mic(PATID = "Anonymous", 
@@ -115,5 +110,12 @@ simulate_ceftriaxone_bayesian_ftime_above_mic(PATID = "Anonymous",
             INTERVAL = 24, 
             TINF = 0.5, 
             set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Garot, Denis et al. (2011): Population pharmacokinetics of ceftriaxone in critically ill septic patients: a reappraisal. In. British Journal of Clinical Pharmacology. https://bpspubs.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2125.2011.04005.x
+  \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 }
 }

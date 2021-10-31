@@ -38,21 +38,16 @@ simulate_gentamicin_mc_pta_auc_mic_ratio(
 \description{
 Gentamicin » Probability of Target Attainment » AUC to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Gentamicin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 }
-
 \examples{
 \dontrun{
 simulate_gentamicin_mc_pta_auc_mic_ratio(PATID = "Anonymous", 
@@ -64,5 +59,11 @@ simulate_gentamicin_mc_pta_auc_mic_ratio(PATID = "Anonymous",
     REGIMENS = list(list(
         DOSE = 200, INTERVAL = 16, 
         TINF = 0.5, set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 }
 }

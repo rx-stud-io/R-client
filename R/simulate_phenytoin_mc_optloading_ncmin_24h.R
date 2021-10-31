@@ -2,13 +2,13 @@
 #' 
 #' Phenytoin » Optimal loading dose simulation » Post-dose concentration after 24 hrs
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Phenytoin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Calculate optimal loading dose and simulate concentrations for the first 24 hours.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Post-dose blood plasma concentration after 24 hrs (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -34,6 +34,10 @@
 #' "GENDER", "PHENYTOINFORM", 
 #' "MODEL", "ALBUMIN", "RENALFUNCTIONSTATUS", 
 #' NA, "CPOSTDOSE24H"))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Muñoz-Pichuante, Daniel et al. (2019): Dosage of phenytoin in neurocritical patients using Bayesian algorithms: a pilot study. In. Drug Metabolism and Personalized Therapy. https://pubmed.ncbi.nlm.nih.gov/31981450
 #' }
 simulate_phenytoin_mc_optloading_ncmin_24h <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, PHENYTOINFORM, MODEL, ALBUMIN, RENALFUNCTIONSTATUS, VALPROICACID, CPOSTDOSE24H) {
   ## check args

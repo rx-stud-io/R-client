@@ -45,21 +45,16 @@ simulate_piperacillin_tazobactam_mc_cfr_ftime_above_mic(
 \description{
 Piperacillin & Tazobactam » Cumulative Fraction of Response » Percent time of free concentration above MIC
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Piperacillin & Tazobactam
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 The percent of time that the free concentration is above the minimum inhibitory concentration.
 }
-
 \examples{
 \dontrun{
 simulate_piperacillin_tazobactam_mc_cfr_ftime_above_mic(PATID = "Anonymous", 
@@ -83,5 +78,12 @@ simulate_piperacillin_tazobactam_mc_cfr_ftime_above_mic(PATID = "Anonymous",
         6.1), "MICDISTR-64" = list(
         4.9), "MICDISTR-128" = list(
         11.9)))
+}
+
+}
+\references{
+\itemize{
+  \item Felton, T. W. et al. (2014): Individualization of Piperacillin Dosing for Critically Ill Patients: Dosing Software To Optimize Antimicrobial Therapy. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/58/7/4094
+  \item Patel, N. et al. (2010): Identification of Optimal Renal Dosage Adjustments for Traditional and Extended-Infusion Piperacillin-Tazobactam Dosing Regimens in Hospitalized Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/54/1/460
 }
 }

@@ -44,21 +44,16 @@ simulate_tobramycin_mc_emp_cmin(
 \description{
 Tobramycin » Empiric therapy » Total minimum concentration
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Tobramycin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Minimum blood plasma concentration (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_tobramycin_mc_emp_cmin(PATID = "Anonymous", 
@@ -148,5 +143,11 @@ simulate_tobramycin_mc_emp_cmin(PATID = "Anonymous",
             DOSE = 800, 
             INTERVAL = 36, 
             TINF = 0.5)))
+}
+
+}
+\references{
+\itemize{
+  \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 }
 }

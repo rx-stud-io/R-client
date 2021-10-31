@@ -47,21 +47,16 @@ simulate_cefepime_mc_emp_fauc_mic_ratio(
 \description{
 Cefepime » Empiric therapy » fAUC to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Cefepime
-}
 
-\section{Method}{
-
+\strong{Method}:
 Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 24 hour area under the free concentration-time curve to minimum inhibitory concentration ratio.
 }
-
 \examples{
 \dontrun{
 simulate_cefepime_mc_emp_fauc_mic_ratio(PATID = "Anonymous", 
@@ -131,5 +126,12 @@ simulate_cefepime_mc_emp_fauc_mic_ratio(PATID = "Anonymous",
             INTERVAL = 24, 
             TINF = 1.75, 
             set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Nicasio et al. (2009): Population Pharmacokinetics of High-Dose, Prolonged-Infusion Cefepime in Adult Critically Ill Patients with Ventilator-Associated Pneumonia. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/19188394/
+  \item Tam et al. (2003): Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal Function. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/12760858/
 }
 }

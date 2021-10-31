@@ -2,13 +2,13 @@
 #' 
 #' Tobramycin » Probability of Target Attainment » Total minimum concentration to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Tobramycin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -32,6 +32,10 @@
 #'             INTERVAL = 6, 
 #'             TINF = 0.5, 
 #'             set = "REGIMEN")))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 #' }
 simulate_tobramycin_mc_pta_cmin_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, CREATININE, CMINPERMIC, REGIMENS) {
   ## check args

@@ -2,13 +2,13 @@
 #' 
 #' Meropenem » Probability of Target Attainment » Percent time of free concentration above MIC
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Meropenem
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' The percent of time that the free concentration is above the minimum inhibitory concentration.
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -45,6 +45,12 @@
 #'             INTERVAL = 8, 
 #'             TINF = 3, 
 #'             set = "REGIMEN")))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Jared L Crandon et al. (2011): Optimization of meropenem dosage in the critically ill population based on renal function. In. Intensive Care Medicine. https://pubmed.ncbi.nlm.nih.gov/21136037
+#'   \item Li, C. et. al (2006): Population Pharmacokinetic Analysis and Dosing Regimen Optimization of Meropenem in Adult Patients. In. The Journal of Clinical Pharmacology. https://accp1.onlinelibrary.wiley.com/doi/10.1177/0091270006291035
+#'   \item Doh, K. et al. (2010): Population pharmacokinetics of meropenem in burn patients. In. Journal of Antimicrobial Chemotherapy. https://academic.oup.com/jac/article/65/11/2428/762112
 #' }
 simulate_meropenem_mc_pta_ftime_above_mic <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, EDEMA, PCTABOVEMIC, CRCLCAP, REGIMENS) {
   ## check args

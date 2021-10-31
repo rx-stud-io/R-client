@@ -47,21 +47,16 @@ simulate_meropenem_bayesian_fcmin_mic_ratio(
 \description{
 Meropenem » Bayesian adaptive dosing » Free minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Meropenem
-}
 
-\section{Method}{
-
+\strong{Method}:
 Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_meropenem_bayesian_fcmin_mic_ratio(PATID = "Anonymous", 
@@ -149,5 +144,13 @@ simulate_meropenem_bayesian_fcmin_mic_ratio(PATID = "Anonymous",
             DOSE = 2000, 
             INTERVAL = 24, 
             TINF = 2)))
+}
+
+}
+\references{
+\itemize{
+  \item Jared L Crandon et al. (2011): Optimization of meropenem dosage in the critically ill population based on renal function. In. Intensive Care Medicine. https://pubmed.ncbi.nlm.nih.gov/21136037
+  \item Li, C. et. al (2006): Population Pharmacokinetic Analysis and Dosing Regimen Optimization of Meropenem in Adult Patients. In. The Journal of Clinical Pharmacology. https://accp1.onlinelibrary.wiley.com/doi/10.1177/0091270006291035
+  \item Doh, K. et al. (2010): Population pharmacokinetics of meropenem in burn patients. In. Journal of Antimicrobial Chemotherapy. https://academic.oup.com/jac/article/65/11/2428/762112
 }
 }

@@ -41,21 +41,16 @@ simulate_cefepime_mc_pta_fcmin_mic_ratio(
 \description{
 Cefepime » Probability of Target Attainment » Free minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Cefepime
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_cefepime_mc_pta_fcmin_mic_ratio(PATID = "Anonymous", 
@@ -68,5 +63,12 @@ simulate_cefepime_mc_pta_fcmin_mic_ratio(PATID = "Anonymous",
         DOSE = 1000, 
         INTERVAL = 8, 
         TINF = 0.5, set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Nicasio et al. (2009): Population Pharmacokinetics of High-Dose, Prolonged-Infusion Cefepime in Adult Critically Ill Patients with Ventilator-Associated Pneumonia. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/19188394/
+  \item Tam et al. (2003): Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal Function. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/12760858/
 }
 }

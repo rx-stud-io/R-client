@@ -41,21 +41,16 @@ simulate_ceftriaxone_mc_pta_fcmin_mic_ratio(
 \description{
 Ceftriaxone » Probability of Target Attainment » Free minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Ceftriaxone
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_ceftriaxone_mc_pta_fcmin_mic_ratio(PATID = "Anonymous", 
@@ -94,5 +89,11 @@ simulate_ceftriaxone_mc_pta_fcmin_mic_ratio(PATID = "Anonymous",
             INTERVAL = 24, 
             TINF = 0.5, 
             set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Garot, Denis et al. (2011): Population pharmacokinetics of ceftriaxone in critically ill septic patients: a reappraisal. In. British Journal of Clinical Pharmacology. https://bpspubs.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2125.2011.04005.x
 }
 }

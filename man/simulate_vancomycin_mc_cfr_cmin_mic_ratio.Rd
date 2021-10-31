@@ -44,21 +44,16 @@ simulate_vancomycin_mc_cfr_cmin_mic_ratio(
 \description{
 Vancomycin » Cumulative Fraction of Response » Total minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Vancomycin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_vancomycin_mc_cfr_cmin_mic_ratio(PATID = "Anonymous", 
@@ -80,5 +75,12 @@ simulate_vancomycin_mc_cfr_cmin_mic_ratio(PATID = "Anonymous",
         0.5), "MICDISTR-4" = list(
         0), "MICDISTR-8" = list(
         0)))
+}
+
+}
+\references{
+\itemize{
+  \item Goti et al. (2018): Hospitalized Patients With and Without Hemodialysis Have Markedly Different Vancomycin Pharmacokinetics: A Population Pharmacokinetic Model-Based Analysis. In. Therapeutic Drug Monitoring. https://pubmed.ncbi.nlm.nih.gov/29470227/
+  \item Buelga, Dolores Santos et al. (2005): Population Pharmacokinetic Analysis of Vancomycin in Patients with Hematological Malignancies. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/49/12/4934
 }
 }

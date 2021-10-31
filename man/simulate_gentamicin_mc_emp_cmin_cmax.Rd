@@ -47,21 +47,16 @@ simulate_gentamicin_mc_emp_cmin_cmax(
 \description{
 Gentamicin » Empiric therapy » Total minimum and maximum concentration
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Gentamicin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Minimum and maximum blood plasma concentration (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_gentamicin_mc_emp_cmin_cmax(PATID = "Anonymous", 
@@ -151,5 +146,11 @@ simulate_gentamicin_mc_emp_cmin_cmax(PATID = "Anonymous",
             DOSE = 800, 
             INTERVAL = 36, 
             TINF = 0.5)))
+}
+
+}
+\references{
+\itemize{
+  \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 }
 }

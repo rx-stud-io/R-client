@@ -44,21 +44,16 @@ simulate_tobramycin_mc_emp_auc_mic_ratio(
 \description{
 Tobramycin » Empiric therapy » AUC to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Tobramycin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 }
-
 \examples{
 \dontrun{
 simulate_tobramycin_mc_emp_auc_mic_ratio(PATID = "Anonymous", 
@@ -148,5 +143,11 @@ simulate_tobramycin_mc_emp_auc_mic_ratio(PATID = "Anonymous",
             DOSE = 800, 
             INTERVAL = 36, 
             TINF = 0.5)))
+}
+
+}
+\references{
+\itemize{
+  \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 }
 }

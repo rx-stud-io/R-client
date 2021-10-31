@@ -2,13 +2,13 @@
 #' 
 #' Cefepime » Empiric therapy » Free minimum concentration
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Cefepime
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Free minimum blood plasma concentration (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -91,6 +91,11 @@
 #'             INTERVAL = 24, 
 #'             TINF = 1.75, 
 #'             set = "REGIMEN")))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Nicasio et al. (2009): Population Pharmacokinetics of High-Dose, Prolonged-Infusion Cefepime in Adult Critically Ill Patients with Ventilator-Associated Pneumonia. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/19188394/
+#'   \item Tam et al. (2003): Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal Function. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/12760858/
 #' }
 simulate_cefepime_mc_emp_fcmin <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, MIC, CMIN, LOADINGDOSE, CRCLCAP, REGIMENS) {
   ## check args

@@ -2,13 +2,13 @@
 #' 
 #' Cefepime » Probability of Target Attainment » Free minimum concentration to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Cefepime
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -33,6 +33,11 @@
 #'         DOSE = 1000, 
 #'         INTERVAL = 8, 
 #'         TINF = 0.5, set = "REGIMEN")))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Nicasio et al. (2009): Population Pharmacokinetics of High-Dose, Prolonged-Infusion Cefepime in Adult Critically Ill Patients with Ventilator-Associated Pneumonia. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/19188394/
+#'   \item Tam et al. (2003): Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal Function. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/12760858/
 #' }
 simulate_cefepime_mc_pta_fcmin_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, CMINPERMIC, CRCLCAP, REGIMENS) {
   ## check args

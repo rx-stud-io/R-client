@@ -45,21 +45,16 @@ simulate_piperacillin_tazobactam_bayesian_fcmin_mic_ratio(
 \description{
 Piperacillin & Tazobactam » Bayesian adaptive dosing » Free minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Piperacillin & Tazobactam
-}
 
-\section{Method}{
-
+\strong{Method}:
 Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_piperacillin_tazobactam_bayesian_fcmin_mic_ratio(PATID = "Anonymous", 
@@ -140,5 +135,13 @@ simulate_piperacillin_tazobactam_bayesian_fcmin_mic_ratio(PATID = "Anonymous",
             INTERVAL = 6, 
             TINF = 0.5, 
             set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Felton, T. W. et al. (2014): Individualization of Piperacillin Dosing for Critically Ill Patients: Dosing Software To Optimize Antimicrobial Therapy. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/58/7/4094
+  \item Patel, N. et al. (2010): Identification of Optimal Renal Dosage Adjustments for Traditional and Extended-Infusion Piperacillin-Tazobactam Dosing Regimens in Hospitalized Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/54/1/460
+  \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 }
 }

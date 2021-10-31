@@ -2,13 +2,13 @@
 #' 
 #' Amikacin » Bayesian adaptive dosing » AUC to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Amikacin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -148,6 +148,11 @@
 #'             DOSE = 800, 
 #'             INTERVAL = 36, 
 #'             TINF = 0.5)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
+#'   \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 #' }
 simulate_amikacin_bayesian_auc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, MIC, AUCPERMIC, HISTORY, REGIMENS) {
   ## check args

@@ -47,21 +47,16 @@ simulate_meropenem_mc_cfr_fcmin_mic_ratio(
 \description{
 Meropenem » Cumulative Fraction of Response » Free minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Meropenem
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_meropenem_mc_cfr_fcmin_mic_ratio(PATID = "Anonymous", 
@@ -99,5 +94,13 @@ simulate_meropenem_mc_cfr_fcmin_mic_ratio(PATID = "Anonymous",
         5.4), "MICDISTR-32" = list(
         2.7), "MICDISTR-64" = list(
         3.2)))
+}
+
+}
+\references{
+\itemize{
+  \item Jared L Crandon et al. (2011): Optimization of meropenem dosage in the critically ill population based on renal function. In. Intensive Care Medicine. https://pubmed.ncbi.nlm.nih.gov/21136037
+  \item Li, C. et. al (2006): Population Pharmacokinetic Analysis and Dosing Regimen Optimization of Meropenem in Adult Patients. In. The Journal of Clinical Pharmacology. https://accp1.onlinelibrary.wiley.com/doi/10.1177/0091270006291035
+  \item Doh, K. et al. (2010): Population pharmacokinetics of meropenem in burn patients. In. Journal of Antimicrobial Chemotherapy. https://academic.oup.com/jac/article/65/11/2428/762112
 }
 }

@@ -2,13 +2,13 @@
 #' 
 #' Vancomycin » Empiric therapy » Total minimum concentration
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Vancomycin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Minimum blood plasma concentration (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -93,6 +93,13 @@
 #'             INTERVAL = 24, 
 #'             TINF = 1.75, 
 #'             set = "REGIMEN")))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Goti et al. (2018): Hospitalized Patients With and Without Hemodialysis Have Markedly Different Vancomycin Pharmacokinetics: A Population Pharmacokinetic Model-Based Analysis. In. Therapeutic Drug Monitoring. https://pubmed.ncbi.nlm.nih.gov/29470227/
+#'   \item Lodise, Thomas P et al. (2009): Relationship between Initial Vancomycin Concentration-Time Profile and Nephrotoxicity among Hospitalized Patients. In. Clinical Infectious Diseases. https://academic.oup.com/cid/article/49/4/507/379286
+#'   \item Buelga, Dolores Santos et al. (2005): Population Pharmacokinetic Analysis of Vancomycin in Patients with Hematological Malignancies. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/49/12/4934
+#'   \item Rybak, Michael J et al. (2020): Therapeutic monitoring of vancomycin for serious methicillin-resistant Staphylococcus aureus infections: A revised consensus guideline and review by the American Society of Health-System Pharmacists, the Infectious Diseases Society of America, the Pediatric Infectious Diseases Society, and the Society of Infectious Diseases Pharmacists. In. American Journal of Health-System Pharmacy. https://academic.oup.com/ajhp/article/77/11/835/5810200
 #' }
 simulate_vancomycin_mc_emp_cmin <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, MIC, CMIN, LOADINGDOSE, TOXICITYINFO, CRCLCAP, REGIMENS) {
   ## check args

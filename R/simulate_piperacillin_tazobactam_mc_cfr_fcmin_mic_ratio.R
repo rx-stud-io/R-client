@@ -2,13 +2,13 @@
 #' 
 #' Piperacillin & Tazobactam » Cumulative Fraction of Response » Free minimum concentration to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Piperacillin & Tazobactam
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -44,6 +44,11 @@
 #'         6.1), "MICDISTR-64" = list(
 #'         4.9), "MICDISTR-128" = list(
 #'         11.9)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Felton, T. W. et al. (2014): Individualization of Piperacillin Dosing for Critically Ill Patients: Dosing Software To Optimize Antimicrobial Therapy. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/58/7/4094
+#'   \item Patel, N. et al. (2010): Identification of Optimal Renal Dosage Adjustments for Traditional and Extended-Infusion Piperacillin-Tazobactam Dosing Regimens in Hospitalized Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/54/1/460
 #' }
 simulate_piperacillin_tazobactam_mc_cfr_fcmin_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, CMINPERMIC, CRCLCAP, REGIMENS, MICDISTR) {
   ## check args

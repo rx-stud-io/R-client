@@ -2,13 +2,13 @@
 #' 
 #' Cefepime » Cumulative Fraction of Response » Percent time of free concentration above MIC
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Cefepime
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' The percent of time that the free concentration is above the minimum inhibitory concentration.
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -52,6 +52,11 @@
 #'         0.8), "MICDISTR-256" = list(
 #'         0.9), "MICDISTR-512" = list(
 #'         1.7)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Nicasio et al. (2009): Population Pharmacokinetics of High-Dose, Prolonged-Infusion Cefepime in Adult Critically Ill Patients with Ventilator-Associated Pneumonia. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/19188394/
+#'   \item Tam et al. (2003): Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal Function. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/12760858/
 #' }
 simulate_cefepime_mc_cfr_ftime_above_mic <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, PCTABOVEMIC, CRCLCAP, REGIMENS, MICDISTR) {
   ## check args

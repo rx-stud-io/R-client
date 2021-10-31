@@ -2,13 +2,13 @@
 #' 
 #' Amikacin » Empiric therapy » Total minimum concentration
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Amikacin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Minimum blood plasma concentration (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -110,6 +110,10 @@
 #'             DOSE = 800, 
 #'             INTERVAL = 36, 
 #'             TINF = 0.5)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
 #' }
 simulate_amikacin_mc_emp_cmin <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, CREATININE, MIC, CMIN, LOADINGDOSE, REGIMENS) {
   ## check args

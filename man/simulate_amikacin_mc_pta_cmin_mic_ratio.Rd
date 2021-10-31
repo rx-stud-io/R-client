@@ -38,21 +38,16 @@ simulate_amikacin_mc_pta_cmin_mic_ratio(
 \description{
 Amikacin » Probability of Target Attainment » Total minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Amikacin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_amikacin_mc_pta_cmin_mic_ratio(PATID = "Anonymous", 
@@ -65,5 +60,11 @@ simulate_amikacin_mc_pta_cmin_mic_ratio(PATID = "Anonymous",
             INTERVAL = 6, 
             TINF = 0.5, 
             set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
 }
 }

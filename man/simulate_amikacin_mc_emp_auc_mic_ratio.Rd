@@ -44,21 +44,16 @@ simulate_amikacin_mc_emp_auc_mic_ratio(
 \description{
 Amikacin » Empiric therapy » AUC to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Amikacin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 }
-
 \examples{
 \dontrun{
 simulate_amikacin_mc_emp_auc_mic_ratio(PATID = "Anonymous", 
@@ -147,5 +142,11 @@ simulate_amikacin_mc_emp_auc_mic_ratio(PATID = "Anonymous",
             DOSE = 800, 
             INTERVAL = 36, 
             TINF = 0.5)))
+}
+
+}
+\references{
+\itemize{
+  \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
 }
 }

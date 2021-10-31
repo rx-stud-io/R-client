@@ -2,13 +2,13 @@
 #' 
 #' Vancomycin » Probability of Target Attainment » Total minimum concentration to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Vancomycin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the probabilities that a specific value of a pharmacodynamic index is achieved in case of different minimum inhibitory concentrations (MIC).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -32,6 +32,11 @@
 #'     REGIMENS = list(list(
 #'         DOSE = 500, INTERVAL = 8, 
 #'         TINF = 0.5, set = "REGIMEN")))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Goti et al. (2018): Hospitalized Patients With and Without Hemodialysis Have Markedly Different Vancomycin Pharmacokinetics: A Population Pharmacokinetic Model-Based Analysis. In. Therapeutic Drug Monitoring. https://pubmed.ncbi.nlm.nih.gov/29470227/
+#'   \item Buelga, Dolores Santos et al. (2005): Population Pharmacokinetic Analysis of Vancomycin in Patients with Hematological Malignancies. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/49/12/4934
 #' }
 simulate_vancomycin_mc_pta_cmin_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, CMINPERMIC, CRCLCAP, REGIMENS) {
   ## check args

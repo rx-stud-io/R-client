@@ -44,21 +44,16 @@ simulate_cefepime_bayesian_fcmin_mic_ratio(
 \description{
 Cefepime » Bayesian adaptive dosing » Free minimum concentration to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Cefepime
-}
 
-\section{Method}{
-
+\strong{Method}:
 Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Free minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_cefepime_bayesian_fcmin_mic_ratio(PATID = "Anonymous", 
@@ -166,5 +161,13 @@ simulate_cefepime_bayesian_fcmin_mic_ratio(PATID = "Anonymous",
             INTERVAL = 24, 
             TINF = 1.75, 
             set = "REGIMEN")))
+}
+
+}
+\references{
+\itemize{
+  \item Nicasio et al. (2009): Population Pharmacokinetics of High-Dose, Prolonged-Infusion Cefepime in Adult Critically Ill Patients with Ventilator-Associated Pneumonia. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/19188394/
+  \item Tam et al. (2003): Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal Function. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/12760858/
+  \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 }
 }

@@ -2,13 +2,13 @@
 #' 
 #' Piperacillin & Tazobactam » Empiric therapy » Free minimum concentration
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Piperacillin & Tazobactam
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' Free minimum blood plasma concentration (mg/L).
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -69,6 +69,11 @@
 #'             DOSE = 4500, 
 #'             INTERVAL = 8, 
 #'             TINF = 0.5)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Felton, T. W. et al. (2014): Individualization of Piperacillin Dosing for Critically Ill Patients: Dosing Software To Optimize Antimicrobial Therapy. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/58/7/4094
+#'   \item Patel, N. et al. (2010): Identification of Optimal Renal Dosage Adjustments for Traditional and Extended-Infusion Piperacillin-Tazobactam Dosing Regimens in Hospitalized Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/54/1/460
 #' }
 simulate_piperacillin_tazobactam_mc_emp_fcmin <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, MIC, CMIN, LOADINGDOSE, CRCLCAP, REGIMENS) {
   ## check args

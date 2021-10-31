@@ -41,21 +41,16 @@ simulate_tobramycin_mc_cfr_auc_mic_ratio(
 \description{
 Tobramycin » Cumulative Fraction of Response » AUC to MIC ratio
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Tobramycin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 }
-
 \examples{
 \dontrun{
 simulate_tobramycin_mc_cfr_auc_mic_ratio(PATID = "Anonymous", 
@@ -78,5 +73,11 @@ simulate_tobramycin_mc_cfr_auc_mic_ratio(PATID = "Anonymous",
         0.7), "MICDISTR-16" = list(
         0.5), "MICDISTR-32" = list(
         7.3)))
+}
+
+}
+\references{
+\itemize{
+  \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 }
 }

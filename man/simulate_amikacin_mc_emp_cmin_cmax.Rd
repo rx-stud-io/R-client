@@ -47,21 +47,16 @@ simulate_amikacin_mc_emp_cmin_cmax(
 \description{
 Amikacin » Empiric therapy » Total minimum and maximum concentration
 }
-\section{Drug}{
-
+\details{
+\strong{Drug}:
 Amikacin
-}
 
-\section{Method}{
-
+\strong{Method}:
 Simulate concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
-}
 
-\section{PK/PD target}{
-
+\strong{PK/PD target}:
 Minimum and maximum blood plasma concentration (mg/L).
 }
-
 \examples{
 \dontrun{
 simulate_amikacin_mc_emp_cmin_cmax(PATID = "Anonymous", 
@@ -151,5 +146,11 @@ simulate_amikacin_mc_emp_cmin_cmax(PATID = "Anonymous",
             DOSE = 800, 
             INTERVAL = 36, 
             TINF = 0.5)))
+}
+
+}
+\references{
+\itemize{
+  \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
 }
 }

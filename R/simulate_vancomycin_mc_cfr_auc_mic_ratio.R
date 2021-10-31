@@ -2,13 +2,13 @@
 #' 
 #' Vancomycin » Cumulative Fraction of Response » AUC to MIC ratio
 #' 
-#' @section Drug:
+#' \strong{Drug}:
 #' Vancomycin
 #' 
-#' @section Method:
+#' \strong{Method}:
 #' Monte Carlo simulation on the proportion of the population achieving a certain pharmacodynamic index value, given the minimum inhibitory concentration (MIC) distribution of the target microorganism(s).
 #' 
-#' @section PK/PD target:
+#' \strong{PK/PD target}:
 #' 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.
 #' 
 #' @param PATID Patient Identifier. User-provided free text (such as patient id, name or alias) to identify related simulations. Must be provided as string.
@@ -42,6 +42,11 @@
 #'         0.5), "MICDISTR-4" = list(
 #'         0), "MICDISTR-8" = list(
 #'         0)))
+#' }
+#' 
+#' @references \itemize{
+#'   \item Goti et al. (2018): Hospitalized Patients With and Without Hemodialysis Have Markedly Different Vancomycin Pharmacokinetics: A Population Pharmacokinetic Model-Based Analysis. In. Therapeutic Drug Monitoring. https://pubmed.ncbi.nlm.nih.gov/29470227/
+#'   \item Buelga, Dolores Santos et al. (2005): Population Pharmacokinetic Analysis of Vancomycin in Patients with Hematological Malignancies. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/49/12/4934
 #' }
 simulate_vancomycin_mc_cfr_auc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, AUCPERMIC, CRCLCAP, REGIMENS, MICDISTR) {
   ## check args
