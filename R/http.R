@@ -1,3 +1,6 @@
+client_id <- '074ba4733a420cc95b50f5036d5beb7a'
+
+
 #' Hit Rx Studio simulation API
 #' @param endpoint path under \url{https://api.rx.studio/v1/simulation/}
 #' @param ... named parameters passed
@@ -13,7 +16,8 @@
 simulate <- function(endpoint, ...) {
     res <- POST(
         url = file.path('https://api.rx.studio/v1/simulation', endpoint),
-        body = toJSON(list(...), auto_unbox = TRUE))
+        body = toJSON(list(...), auto_unbox = TRUE),
+        add_headers('X-Api-Key' = client_id))
     stop_for_status(res)
     content(res)
 }
