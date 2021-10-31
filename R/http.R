@@ -26,3 +26,15 @@ simulate <- function(endpoint, ...) {
     res <- content(res)
     structure(res, class = c('rx_studio_report', class(res)))
 }
+
+
+#' Open HTML in browser
+#' @param x HTML document returned by \code{simulate}
+#' @param ... further parameters
+#' @export
+#' @importFrom utils browseURL
+print.rx_studio_report <- function(x, ...) {
+    t <- tempfile(fileext = '.html')
+    cat(as.character(x), file = t)
+    browseURL(file.path('file:/', t))
+}
