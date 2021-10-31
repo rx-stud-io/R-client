@@ -16,7 +16,7 @@ api_client_id <- '074ba4733a420cc95b50f5036d5beb7a'
 #' }
 #' @importFrom logger log_info
 simulate <- function(endpoint, ...) {
-    url <- file.path(api_base, gsub('_', '-', endpoint))
+    url <- file.path(api_base, endpoint)
     timer <- Sys.time()
     log_info('Sending request to {url}')
     body <- toJSON(list(...), auto_unbox = TRUE)
