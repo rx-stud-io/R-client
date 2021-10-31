@@ -1,4 +1,5 @@
-client_id <- '074ba4733a420cc95b50f5036d5beb7a'
+api_base <- 'https://api.rx.studio/v1/simulation'
+api_client_id <- '074ba4733a420cc95b50f5036d5beb7a'
 
 
 #' Hit Rx Studio simulation API
@@ -15,11 +16,11 @@ client_id <- '074ba4733a420cc95b50f5036d5beb7a'
 #' }
 #' @importFrom logger log_info
 simulate <- function(endpoint, ...) {
-    url <- file.path('https://api.rx.studio/v1/simulation', gsub('_', '-', endpoint))
+    url <- file.path(api_base, gsub('_', '-', endpoint))
     timer <- Sys.time()
     log_info('Sending request to {url}')
     body <- toJSON(list(...), auto_unbox = TRUE)
-    res <- POST(url = url, body = body, add_headers('X-Api-Key' = client_id))
+    res <- POST(url = url, body = body, add_headers('X-Api-Key' = api_client_id))
     log_info('Response received in {as.numeric(difftime(Sys.time(), timer, units = "secs"))} seconds.')
     stop_for_status(res)
     content(res)
