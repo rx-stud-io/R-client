@@ -20,7 +20,13 @@ simulate <- function(endpoint, ...) {
     timer <- Sys.time()
     log_info('Sending request to {url}')
     body <- toJSON(list(...), auto_unbox = TRUE)
-    res <- POST(url = url, body = body, add_headers('X-Api-Key' = api_client_id))
+    res <- POST(
+        url = url,
+        body = body,
+        add_headers(
+            'X-Api-Key' = api_client_id,
+            'Authorization' = paste('Bearer', key = get_id_token())
+        ))
     log_info('Response received in {as.numeric(difftime(Sys.time(), timer, units = "secs"))} seconds.')
     stop_for_status(res)
     res <- content(res)
