@@ -23,7 +23,7 @@ get_id_token <- function() {
     }
 
     if (is.null(access_token)) {
-        stop('Access token not set yet with `set_access_token`.')
+        stop('Rx Studio access token has not been set yet! Please use `set_access_token` first.')
     }
 
     resp <- POST(
