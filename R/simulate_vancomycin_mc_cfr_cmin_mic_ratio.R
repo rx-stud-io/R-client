@@ -15,7 +15,7 @@
 #' @param AGE Age. Age of the patient in years. Must be provided as numeric (min. 18, max. 120 year).
 #' @param HEIGHT Height. Height of the patient. Must be provided as numeric (min. 100, max. 250 cm).
 #' @param WEIGHT Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).
-#' @param GENDER Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').
+#' @param GENDER Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').
 #' @param CREATININE Creatinine. Serum creatinine. Must be provided as numeric (min. 0.01, max. 15 mg/dL).
 #' @param MODEL Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Goti et al. (2018) - Patients NOT undergoing hemodialysis', 'Goti et al. (2018) - Patients undergoing hemodialysis', 'Buelga et al. (2005) - Patients with hematological malignancies', 'Buelga et al. (2005) - AML patients, Model 1' or 'Buelga et al. (2005) - AML patients, Model 2').
 #' @param CMINPERMIC Minimum concentration to MIC ratio target. The PK/PD target can be provided as minimum concentration to minimum inhibitory concentration ratio (Cmin/MIC). Must be provided as numeric (min. 0.1, max. 50 ).

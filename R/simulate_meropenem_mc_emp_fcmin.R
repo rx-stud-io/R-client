@@ -15,12 +15,12 @@
 #' @param AGE Age. Age of the patient in years. Must be provided as numeric (min. 18, max. 120 year).
 #' @param HEIGHT Height. Height of the patient. Must be provided as numeric (min. 100, max. 250 cm).
 #' @param WEIGHT Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).
-#' @param GENDER Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').
+#' @param GENDER Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').
 #' @param CREATININE Creatinine. Serum creatinine. Must be provided as numeric (min. 0.01, max. 15 mg/dL).
 #' @param MODEL Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Crandon et al. (2011) - ICU', 'Li, C. et. al. (2006) - General ward' or 'Doh, K. et al. (2010) - Burn patients').
 #' @param EDEMA Edema. Presence of edema in case of Burn Patients. Must be provided as string ('No' or 'Yes').
 #' @param MIC MIC. Minimum Inhibitory Concentration (MIC). Must be provided as numeric (min. 0.01, max. 1024 mg/L).
-#' @param CMIN Minimum concentration target. The PK/PD target can be provided as minimum blood plasma concentration (Cmin). Must be provided as numeric (min. 1, max. 200 mg/L).
+#' @param CMIN Minimum concentration target. The PK/PD target can be provided as minimum blood plasma concentration (Cmin). Must be provided as numeric (min. 0.1, max. 200 mg/L).
 #' @param LOADINGDOSE Loading dose. Loading dose is desired or not. Must be provided as string ('No' or 'Yes').
 #' @param CRCLCAP Capping Creatinine Clearance. Whether to use capping for creatinine clearance. Must be provided as string ('No cap', '120 ml/min', '130 ml/min', '140 ml/min' or '150 ml/min').
 #' @param REGIMENS Dosing Regimens. List of dosing regimens to be used in simulating target attainment, from which the dosing regimen with the smallest absolute difference from the desired target will be automatically selected. Must be provided as list of 1-20 'REGIMEN' values. Use the \code{regimen} helper function to define the REGIMEN values.
@@ -114,7 +114,7 @@ simulate_meropenem_mc_emp_fcmin <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, 
     upper = 1024
   )
   assert_number(CMIN,
-    lower = 1,
+    lower = 0.1,
     upper = 200
   )
   assert_string(LOADINGDOSE)
