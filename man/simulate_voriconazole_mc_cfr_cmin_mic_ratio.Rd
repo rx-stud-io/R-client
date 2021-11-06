@@ -39,7 +39,7 @@ simulate_voriconazole_mc_cfr_cmin_mic_ratio(
 
 \item{ORALORIVORKGREGIMENS}{Dosing Regimens. List of dosing regimens to be used in simulating target attainment, from which the dosing regimen with the smallest absolute difference from the desired target will be automatically selected. Must be provided as list of 1-8 'KGREGIMEN', 'REGIMEN' or 'ORALREGIMEN' values. Use the \code{regimen} helper function to define the REGIMEN values.}
 
-\item{MICDISTR}{MIC distribution. Non-cumulative MIC distribution of organism for the given antibiotic at the specified MICs provided as percentages with a sum of 100%. MIC distribution of voriconazole when tested against Aspergillus fumigatus. [Borman et al. "MIC Distributions and Evaluation of Fungicidal Activity for Amphotericin B, Itraconazole, Voriconazole, Posaconazole and Caspofungin and 20 Species of Pathogenic Filamentous Fungi Determined Using the CLSI Broth Microdilution Method." Journal of fungi (Basel, Switzerland) vol. 3,2 27. 31 May. 2017, doi:10.3390/jof3020027]. Must be provided as set.}
+\item{MICDISTR}{MIC distribution. Non-cumulative MIC distribution of organism for the given antibiotic at the specified MICs provided as percentages with a sum of 100\%. MIC distribution of voriconazole when tested against Aspergillus fumigatus. [Borman et al. "MIC Distributions and Evaluation of Fungicidal Activity for Amphotericin B, Itraconazole, Voriconazole, Posaconazole and Caspofungin and 20 Species of Pathogenic Filamentous Fungi Determined Using the CLSI Broth Microdilution Method." Journal of fungi (Basel, Switzerland) vol. 3,2 27. 31 May. 2017, doi:10.3390/jof3020027]. Must be provided as set.}
 }
 \description{
 Voriconazole » Cumulative Fraction of Response » Total minimum concentration to MIC ratio

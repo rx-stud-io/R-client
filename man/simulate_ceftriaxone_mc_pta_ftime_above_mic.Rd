@@ -2,7 +2,7 @@
 % Please edit documentation in R/simulate_ceftriaxone_mc_pta_ftime_above_mic.R
 \name{simulate_ceftriaxone_mc_pta_ftime_above_mic}
 \alias{simulate_ceftriaxone_mc_pta_ftime_above_mic}
-\title{Ceftriaxone » PTA » % fT > MIC}
+\title{Ceftriaxone » PTA » \% fT > MIC}
 \usage{
 simulate_ceftriaxone_mc_pta_ftime_above_mic(
   PATID,
@@ -32,7 +32,7 @@ simulate_ceftriaxone_mc_pta_ftime_above_mic(
 
 \item{MODEL}{Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Garot et al. (2011) - ICU, septic patients').}
 
-\item{PCTABOVEMIC}{Percent of time target that the drug concentration is above MIC. The PK/PD target can be provided as the percent of time that the drug concentration is above the minimum inhibitory concentration (% T > MIC). Must be provided as numeric (min. 5, max. 100 %).}
+\item{PCTABOVEMIC}{Percent of time target that the drug concentration is above MIC. The PK/PD target can be provided as the percent of time that the drug concentration is above the minimum inhibitory concentration (\% T > MIC). Must be provided as numeric (min. 5, max. 100 \%).}
 
 \item{CRCLCAP}{Capping Creatinine Clearance. Whether to use capping for creatinine clearance. Must be provided as string ('No cap', '120 ml/min', '130 ml/min', '140 ml/min' or '150 ml/min').}
 

@@ -2,7 +2,7 @@
 % Please edit documentation in R/simulate_meropenem_mc_cfr_ftime_above_mic.R
 \name{simulate_meropenem_mc_cfr_ftime_above_mic}
 \alias{simulate_meropenem_mc_cfr_ftime_above_mic}
-\title{Meropenem » CFR » % fT > MIC}
+\title{Meropenem » CFR » \% fT > MIC}
 \usage{
 simulate_meropenem_mc_cfr_ftime_above_mic(
   PATID,
@@ -36,13 +36,13 @@ simulate_meropenem_mc_cfr_ftime_above_mic(
 
 \item{EDEMA}{Edema. Presence of edema in case of Burn Patients. Must be provided as string ('No' or 'Yes').}
 
-\item{PCTABOVEMIC}{Percent of time target that the drug concentration is above MIC. The PK/PD target can be provided as the percent of time that the drug concentration is above the minimum inhibitory concentration (% T > MIC). Must be provided as numeric (min. 5, max. 100 %).}
+\item{PCTABOVEMIC}{Percent of time target that the drug concentration is above MIC. The PK/PD target can be provided as the percent of time that the drug concentration is above the minimum inhibitory concentration (\% T > MIC). Must be provided as numeric (min. 5, max. 100 \%).}
 
 \item{CRCLCAP}{Capping Creatinine Clearance. Whether to use capping for creatinine clearance. Must be provided as string ('No cap', '120 ml/min', '130 ml/min', '140 ml/min' or '150 ml/min').}
 
 \item{REGIMENS}{Dosing Regimens. List of dosing regimens to be used in simulating target attainment, from which the dosing regimen with the smallest absolute difference from the desired target will be automatically selected. Must be provided as list of 1-8 'REGIMEN' values. Use the \code{regimen} helper function to define the REGIMEN values.}
 
-\item{MICDISTR}{MIC distribution. Non-cumulative MIC distribution of organism for the given antibiotic at the specified MICs provided as percentages with a sum of 100%. MIC distribution of meropenem and comparator antimicrobial agents when tested against Pseudomonas isolates in the SENTRY program collected during 2019 (mg/L). Dataset provided by JMI Laboratories and the SENTRY Antimicrobial Surveillance Program, available at <a href="http://sentry-mvp.jmilabs.com" target="_new">sentry-mvp.jmilabs.com</a>. Must be provided as set.}
+\item{MICDISTR}{MIC distribution. Non-cumulative MIC distribution of organism for the given antibiotic at the specified MICs provided as percentages with a sum of 100\%. MIC distribution of meropenem and comparator antimicrobial agents when tested against Pseudomonas isolates in the SENTRY program collected during 2019 (mg/L). Dataset provided by JMI Laboratories and the SENTRY Antimicrobial Surveillance Program, available at <a href="http://sentry-mvp.jmilabs.com" target="_new">sentry-mvp.jmilabs.com</a>. Must be provided as set.}
 }
 \description{
 Meropenem » Cumulative Fraction of Response » Percent time of free concentration above MIC

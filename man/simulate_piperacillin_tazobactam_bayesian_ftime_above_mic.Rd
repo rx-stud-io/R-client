@@ -3,7 +3,7 @@
 %   R/simulate_piperacillin_tazobactam_bayesian_ftime_above_mic.R
 \name{simulate_piperacillin_tazobactam_bayesian_ftime_above_mic}
 \alias{simulate_piperacillin_tazobactam_bayesian_ftime_above_mic}
-\title{Piperacillin & Tazobactam » Bayesian » % fT > MIC}
+\title{Piperacillin & Tazobactam » Bayesian » \% fT > MIC}
 \usage{
 simulate_piperacillin_tazobactam_bayesian_ftime_above_mic(
   PATID,
@@ -34,7 +34,7 @@ simulate_piperacillin_tazobactam_bayesian_ftime_above_mic(
 
 \item{MIC}{MIC. Minimum Inhibitory Concentration (MIC). Must be provided as numeric (min. 0.01, max. 1024 mg/L).}
 
-\item{PCTABOVEMIC}{Percent of time target that the drug concentration is above MIC. The PK/PD target can be provided as the percent of time that the drug concentration is above the minimum inhibitory concentration (% T > MIC). Must be provided as numeric (min. 5, max. 100 %).}
+\item{PCTABOVEMIC}{Percent of time target that the drug concentration is above MIC. The PK/PD target can be provided as the percent of time that the drug concentration is above the minimum inhibitory concentration (\% T > MIC). Must be provided as numeric (min. 5, max. 100 \%).}
 
 \item{CRCLCAP}{Capping Creatinine Clearance. Whether to use capping for creatinine clearance. Must be provided as string ('No cap', '120 ml/min', '130 ml/min', '140 ml/min' or '150 ml/min').}
 

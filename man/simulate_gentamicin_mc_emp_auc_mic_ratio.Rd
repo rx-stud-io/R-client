@@ -35,7 +35,7 @@ simulate_gentamicin_mc_emp_auc_mic_ratio(
 
 \item{MIC}{MIC. Minimum Inhibitory Concentration (MIC). Must be provided as numeric (min. 0.01, max. 1024 mg/L).}
 
-\item{AUCPERMIC}{AUC to MIC ratio target. The PK/PD target can be provided as 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio (AUC/MIC). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside%20Dosing%20Guide%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 10, max. 2000 ).}
+\item{AUCPERMIC}{AUC to MIC ratio target. The PK/PD target can be provided as 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio (AUC/MIC). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside\%20Dosing\%20Guide\%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 10, max. 2000 ).}
 
 \item{LOADINGDOSE}{Loading dose. Loading dose is desired or not. Must be provided as string ('No' or 'Yes').}
 
