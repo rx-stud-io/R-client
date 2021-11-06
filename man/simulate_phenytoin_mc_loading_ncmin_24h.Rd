@@ -28,7 +28,7 @@ simulate_phenytoin_mc_loading_ncmin_24h(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{PHENYTOINFORM}{Phenytoin form. Form of phenytoin to be used during simulations. Must be provided as string ('Phenytoin sodium IV' or 'Fosphenytoin sodium IV').}
 
@@ -42,7 +42,7 @@ simulate_phenytoin_mc_loading_ncmin_24h(
 
 \item{LOADINGDOSEPERKG}{Required loading dose per kg. Required loading dose in mg/kg, calculated for the corrected weight. Must be provided as numeric (min. 1, max. 100 mg(PE)/kg).}
 
-\item{CPOSTDOSE24H}{Post-dose plasma concentration after 24 hrs target. The PK/PD target can be provided as post-dose blood plasma concentration after 24 hrs (Cmin). Must be provided as numeric (min. 1, max. 200 mg/L).}
+\item{CPOSTDOSE24H}{Post-dose plasma concentration after 24 hrs target. The PK/PD target can be provided as post-dose blood plasma concentration after 24 hrs (Cmin). Must be provided as numeric (min. 0.1, max. 200 mg/L).}
 }
 \description{
 Phenytoin » Loading dose simulation » Post-dose concentration after 24 hrs

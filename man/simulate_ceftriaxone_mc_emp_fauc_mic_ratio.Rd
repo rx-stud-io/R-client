@@ -28,7 +28,7 @@ simulate_ceftriaxone_mc_emp_fauc_mic_ratio(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{CREATININE}{Creatinine. Serum creatinine. Must be provided as numeric (min. 0.01, max. 15 mg/dL).}
 

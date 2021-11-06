@@ -25,7 +25,7 @@ simulate_gentamicin_mc_pta_auc_mic_ratio(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{MODEL}{Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Pai et al. (2011) - General ward').}
 

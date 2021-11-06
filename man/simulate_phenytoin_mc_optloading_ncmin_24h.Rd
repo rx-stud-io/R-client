@@ -27,7 +27,7 @@ simulate_phenytoin_mc_optloading_ncmin_24h(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{PHENYTOINFORM}{Phenytoin form. Form of phenytoin to be used during simulations. Must be provided as string ('Phenytoin sodium IV' or 'Fosphenytoin sodium IV').}
 
@@ -39,7 +39,7 @@ simulate_phenytoin_mc_optloading_ncmin_24h(
 
 \item{VALPROICACID}{Valproic acid blood level (leave empty if none). Total valproic acid concentration, leave empty or set to zero if no concurrent administration. Must be provided as numeric (min. 0, max. 500 mg/L).}
 
-\item{CPOSTDOSE24H}{Post-dose plasma concentration after 24 hrs target. The PK/PD target can be provided as post-dose blood plasma concentration after 24 hrs (Cmin). Must be provided as numeric (min. 1, max. 200 mg/L).}
+\item{CPOSTDOSE24H}{Post-dose plasma concentration after 24 hrs target. The PK/PD target can be provided as post-dose blood plasma concentration after 24 hrs (Cmin). Must be provided as numeric (min. 0.1, max. 200 mg/L).}
 }
 \description{
 Phenytoin » Optimal loading dose simulation » Post-dose concentration after 24 hrs

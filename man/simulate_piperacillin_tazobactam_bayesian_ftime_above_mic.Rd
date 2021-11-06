@@ -28,7 +28,7 @@ simulate_piperacillin_tazobactam_bayesian_ftime_above_mic(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{MODEL}{Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Felton et al. (2014) - ICU' or 'Patel et. al. (2010) - General ward').}
 

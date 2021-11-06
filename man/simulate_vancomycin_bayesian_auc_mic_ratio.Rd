@@ -28,7 +28,7 @@ simulate_vancomycin_bayesian_auc_mic_ratio(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{MODEL}{Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Goti et al. (2018) - Patients NOT undergoing hemodialysis', 'Goti et al. (2018) - Patients undergoing hemodialysis', 'Buelga et al. (2005) - Patients with hematological malignancies', 'Buelga et al. (2005) - AML patients, Model 1' or 'Buelga et al. (2005) - AML patients, Model 2').}
 

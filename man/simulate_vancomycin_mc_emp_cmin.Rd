@@ -29,7 +29,7 @@ simulate_vancomycin_mc_emp_cmin(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{CREATININE}{Creatinine. Serum creatinine. Must be provided as numeric (min. 0.01, max. 15 mg/dL).}
 
@@ -37,7 +37,7 @@ simulate_vancomycin_mc_emp_cmin(
 
 \item{MIC}{MIC. Minimum Inhibitory Concentration (MIC). Must be provided as numeric (min. 0.01, max. 1024 mg/L).}
 
-\item{CMIN}{Minimum concentration target. The PK/PD target can be provided as minimum blood plasma concentration (Cmin). Must be provided as numeric (min. 1, max. 200 mg/L).}
+\item{CMIN}{Minimum concentration target. The PK/PD target can be provided as minimum blood plasma concentration (Cmin). Must be provided as numeric (min. 0.1, max. 200 mg/L).}
 
 \item{LOADINGDOSE}{Loading dose. Loading dose is desired or not. Must be provided as string ('No' or 'Yes').}
 

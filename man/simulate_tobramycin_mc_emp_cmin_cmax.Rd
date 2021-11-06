@@ -28,7 +28,7 @@ simulate_tobramycin_mc_emp_cmin_cmax(
 
 \item{WEIGHT}{Weight. Actual body weight of the patient. Must be provided as numeric (min. 20, max. 500 kg).}
 
-\item{GENDER}{Sex. Sex of the patient. Must be provided as string ('Male' or 'Female').}
+\item{GENDER}{Sex. Patient's sex for clinical decision-making. Must be provided as string ('Male' or 'Female').}
 
 \item{MODEL}{Model for population of interest. Pharmacokinetic model to be used for specific patient type during simulations. Must be provided as string ('Pai et al. (2011) - General ward').}
 
@@ -36,9 +36,9 @@ simulate_tobramycin_mc_emp_cmin_cmax(
 
 \item{MIC}{MIC. Minimum Inhibitory Concentration (MIC). Must be provided as numeric (min. 0.01, max. 1024 mg/L).}
 
-\item{CMIN}{Minimum concentration target. The PK/PD target can be provided as minimum blood plasma concentration (Cmin). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside%20Dosing%20Guide%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 1, max. 200 mg/L).}
+\item{CMIN}{Minimum concentration target. The PK/PD target can be provided as minimum blood plasma concentration (Cmin). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside%20Dosing%20Guide%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 0.1, max. 200 mg/L).}
 
-\item{CMAX}{Maximum concentration target. The PK/PD target can be provided as maximum blood plasma concentration (Cmax). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside%20Dosing%20Guide%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 1, max. 200 mg/L).}
+\item{CMAX}{Maximum concentration target. The PK/PD target can be provided as maximum blood plasma concentration (Cmax). For selecting an appropriate target please refer to the dosing guideline of your institution, e.g. <a href="http://med.stanford.edu/bugsanddrugs/guidebook/_jcr_content/main/panel_builder_584648957/panel_0/download_1194988017/file.res/Aminoglycoside%20Dosing%20Guide%202019-05-20.pdf" target="_new">Stanford Health Care Aminoglycoside Dosing Guide</a>. Must be provided as numeric (min. 0.1, max. 200 mg/L).}
 
 \item{LOADINGDOSE}{Loading dose. Loading dose is desired or not. Must be provided as string ('No' or 'Yes').}
 
