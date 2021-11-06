@@ -1,7 +1,9 @@
 Type: Package
 Package: RxStudio
 Authors@R: c(
-    person("Gergely", "Daróczi", email = "daroczig@rx.studio", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3149-8537")),
+    person("Gergely", "Daróczi", email = "gergely@rx.studio", role = c("aut", "cre"), comment = c(ORCID = "0000-0003-3149-8537")),
+    person("Ajay", "Gopal", email = "ajay@rx.studio", role = c("aut"), comment = c(ORCID = "0000-0003-3023-6834")),
+    person("László", "Szakács", role = c("aut")),
     person("Rx Studio Inc.", role = c("fnd"))
   )
 Title: Client to Rx Studio
