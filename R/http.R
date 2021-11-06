@@ -6,7 +6,7 @@ api_client_id <- '074ba4733a420cc95b50f5036d5beb7a'
 #' @param endpoint path under \url{https://api.rx.studio/v1/simulation/}
 #' @param ... named parameters passed
 #' @keywords internal
-#' @importFrom httr POST stop_for_status
+#' @importFrom httr POST stop_for_status add_headers content
 #' @importFrom jsonlite toJSON
 #' @examples \dontrun{
 #' simulate('cefepime-mc-pta-ftime-above-mic',
