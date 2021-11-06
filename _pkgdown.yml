@@ -2,3 +2,20 @@ authors:
   Rx Studio Inc.:
     href: https://rx.studio
     html: <img src="https://rx.studio/images/logo_horizontal.png" height="24" />
+reference:
+- title: "Environment"
+  desc: >
+    Functions for setting up access to the Rx Studio APIs.
+- contents:
+  - set_access_token
+- title: "Simulation endpoints"
+  desc: >
+    Functions for accessing the Rx Studio APIs for simulating personalized drug dosing.
+- contents:
+  - starts_with("simulate_")
+- title: "Helpers"
+  desc: "Functions for making it easier to define requests to the Rx Studio APIs."
+- contents:
+  - dose
+  - concentration
+  - regimen
