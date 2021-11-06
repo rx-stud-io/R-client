@@ -16,6 +16,7 @@ Encoding: UTF-8
 License: AGPL-3
 Imports:
   utils,
+  logger,
   jsonlite,
   httr,
   checkmate
