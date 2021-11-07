@@ -109,6 +109,8 @@
 #'   \item Patel, N. et al. (2010): Identification of Optimal Renal Dosage Adjustments for Traditional and Extended-Infusion Piperacillin-Tazobactam Dosing Regimens in Hospitalized Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/54/1/460
 #'   \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_piperacillin_tazobactam_bayesian_ftime_above_mic <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, MIC, PCTABOVEMIC, CRCLCAP, HISTORY, REGIMENS) {
   ## check args
   assert_string(PATID)

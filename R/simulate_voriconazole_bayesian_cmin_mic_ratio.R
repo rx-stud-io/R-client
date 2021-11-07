@@ -75,6 +75,8 @@
 #' @references \itemize{
 #'   \item Pascual, Andres et al. (2012): Challenging recommended oral and intravenous voriconazole doses for improved efficacy and safety: population pharmacokinetics-based analysis of adult patients with invasive fungal infections. In. Clinical Infectious Diseases. https://pubmed.ncbi.nlm.nih.gov/22610925
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_voriconazole_bayesian_cmin_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, RIFAMPICIN, SEVEREHEPATICCHOLESTASIS, CMINPERMIC, ORALORIVBAREHISTORY, ORALORIVORKGREGIMENS) {
   ## check args
   assert_string(PATID)

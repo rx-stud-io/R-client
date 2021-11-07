@@ -136,6 +136,8 @@
 #'   \item Tam et al. (2003): Pharmacokinetics and Pharmacodynamics of Cefepime in Patients with Various Degrees of Renal Function. In. Antimicrobial Agents and Chemotherapy. https://pubmed.ncbi.nlm.nih.gov/12760858/
 #'   \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_cefepime_bayesian_ftime_above_mic <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, MIC, PCTABOVEMIC, CRCLCAP, HISTORY, REGIMENS) {
   ## check args
   assert_string(PATID)

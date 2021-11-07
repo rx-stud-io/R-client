@@ -117,6 +117,8 @@
 #' @references \itemize{
 #'   \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_amikacin_mc_emp_cmin_cmax <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, CREATININE, MIC, CMIN, CMAX, LOADINGDOSE, REGIMENS) {
   ## check args
   assert_string(PATID)

@@ -67,6 +67,8 @@
 #'   \item Li, C. et. al (2006): Population Pharmacokinetic Analysis and Dosing Regimen Optimization of Meropenem in Adult Patients. In. The Journal of Clinical Pharmacology. https://accp1.onlinelibrary.wiley.com/doi/10.1177/0091270006291035
 #'   \item Doh, K. et al. (2010): Population pharmacokinetics of meropenem in burn patients. In. Journal of Antimicrobial Chemotherapy. https://academic.oup.com/jac/article/65/11/2428/762112
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_meropenem_mc_cfr_ftime_above_mic <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, EDEMA, PCTABOVEMIC, CRCLCAP, REGIMENS, MICDISTR) {
   ## check args
   assert_string(PATID)

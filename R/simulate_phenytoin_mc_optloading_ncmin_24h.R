@@ -39,6 +39,8 @@
 #' @references \itemize{
 #'   \item Muñoz-Pichuante, Daniel et al. (2019): Dosage of phenytoin in neurocritical patients using Bayesian algorithms: a pilot study. In. Drug Metabolism and Personalized Therapy. https://pubmed.ncbi.nlm.nih.gov/31981450
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_phenytoin_mc_optloading_ncmin_24h <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, PHENYTOINFORM, MODEL, ALBUMIN, RENALFUNCTIONSTATUS, VALPROICACID, CPOSTDOSE24H) {
   ## check args
   assert_string(PATID)

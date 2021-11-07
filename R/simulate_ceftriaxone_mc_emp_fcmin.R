@@ -68,6 +68,8 @@
 #' @references \itemize{
 #'   \item Garot, Denis et al. (2011): Population pharmacokinetics of ceftriaxone in critically ill septic patients: a reappraisal. In. British Journal of Clinical Pharmacology. https://bpspubs.onlinelibrary.wiley.com/doi/full/10.1111/j.1365-2125.2011.04005.x
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_ceftriaxone_mc_emp_fcmin <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, MIC, CMIN, LOADINGDOSE, CRCLCAP, REGIMENS) {
   ## check args
   assert_string(PATID)

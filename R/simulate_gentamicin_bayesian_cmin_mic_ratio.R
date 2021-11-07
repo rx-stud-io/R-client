@@ -154,6 +154,8 @@
 #'   \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 #'   \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_gentamicin_bayesian_cmin_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, MIC, CMINPERMIC, HISTORY, REGIMENS) {
   ## check args
   assert_string(PATID)

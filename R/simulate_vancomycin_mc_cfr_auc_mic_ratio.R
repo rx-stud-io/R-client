@@ -48,6 +48,8 @@
 #'   \item Goti et al. (2018): Hospitalized Patients With and Without Hemodialysis Have Markedly Different Vancomycin Pharmacokinetics: A Population Pharmacokinetic Model-Based Analysis. In. Therapeutic Drug Monitoring. https://pubmed.ncbi.nlm.nih.gov/29470227/
 #'   \item Buelga, Dolores Santos et al. (2005): Population Pharmacokinetic Analysis of Vancomycin in Patients with Hematological Malignancies. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/49/12/4934
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_vancomycin_mc_cfr_auc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, AUCPERMIC, CRCLCAP, REGIMENS, MICDISTR) {
   ## check args
   assert_string(PATID)

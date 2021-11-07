@@ -101,6 +101,8 @@
 #'   \item Buelga, Dolores Santos et al. (2005): Population Pharmacokinetic Analysis of Vancomycin in Patients with Hematological Malignancies. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/49/12/4934
 #'   \item Rybak, Michael J et al. (2020): Therapeutic monitoring of vancomycin for serious methicillin-resistant Staphylococcus aureus infections: A revised consensus guideline and review by the American Society of Health-System Pharmacists, the Infectious Diseases Society of America, the Pediatric Infectious Diseases Society, and the Society of Infectious Diseases Pharmacists. In. American Journal of Health-System Pharmacy. https://academic.oup.com/ajhp/article/77/11/835/5810200
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_vancomycin_mc_emp_auc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, MIC, AUCPERMIC, LOADINGDOSE, TOXICITYINFO, CRCLCAP, REGIMENS) {
   ## check args
   assert_string(PATID)

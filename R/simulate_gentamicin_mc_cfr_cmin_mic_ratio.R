@@ -48,6 +48,8 @@
 #' @references \itemize{
 #'   \item Pai et al. (2011): Simplified Estimation of Aminoglycoside Pharmacokinetics in Underweight and Obese Adult Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/55/9/4006
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_gentamicin_mc_cfr_cmin_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, CREATININE, CMINPERMIC, REGIMENS, MICDISTR) {
   ## check args
   assert_string(PATID)

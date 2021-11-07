@@ -154,6 +154,8 @@
 #'   \item Saez Fernandez et al. (2019): Evaluation of renal function equations to predict amikacin clearance. In. Expert Review of Clinical Pharmacology. https://www.tandfonline.com/doi/full/10.1080/17512433.2019.1637253
 #'   \item K. Soetaert, T. Petzoldt (2010): Inverse Modelling, Sensitivity and Monte Carlo Analysis in R Using Package FME. In. Journal of Statistical Software. https://www.jstatsoft.org/article/view/v033i03
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_amikacin_bayesian_auc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, MODEL, MIC, AUCPERMIC, HISTORY, REGIMENS) {
   ## check args
   assert_string(PATID)

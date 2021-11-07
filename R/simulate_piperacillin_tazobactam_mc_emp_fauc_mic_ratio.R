@@ -76,6 +76,8 @@
 #'   \item Felton, T. W. et al. (2014): Individualization of Piperacillin Dosing for Critically Ill Patients: Dosing Software To Optimize Antimicrobial Therapy. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/58/7/4094
 #'   \item Patel, N. et al. (2010): Identification of Optimal Renal Dosage Adjustments for Traditional and Extended-Infusion Piperacillin-Tazobactam Dosing Regimens in Hospitalized Patients. In. Antimicrobial Agents and Chemotherapy. https://aac.asm.org/content/54/1/460
 #' }
+#' @export 
+#' @importFrom checkmate assert_number assert_string assert_choice
 simulate_piperacillin_tazobactam_mc_emp_fauc_mic_ratio <- function(PATID, AGE, HEIGHT, WEIGHT, GENDER, CREATININE, MODEL, MIC, AUCPERMIC, LOADINGDOSE, CRCLCAP, REGIMENS) {
   ## check args
   assert_string(PATID)
