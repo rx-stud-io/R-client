@@ -16,6 +16,7 @@ api_client_id <- '074ba4733a420cc95b50f5036d5beb7a'
 #' }
 #' @importFrom logger log_info
 simulate <- function(endpoint, ...) {
+
     url <- file.path(api_base, endpoint)
     timer <- Sys.time()
     log_info('Sending request to {url}')
@@ -28,9 +29,18 @@ simulate <- function(endpoint, ...) {
             'Authorization' = paste('Bearer', key = get_id_token())
         ))
     log_info('Response received in {as.numeric(difftime(Sys.time(), timer, units = "secs"))} seconds.')
+
+    ## user-facing error due to bad request
+    if (res$status == 400) {
+        stop(content(res)$message)
+    }
+    ## other error?
     stop_for_status(res)
+
+    ## return
     res <- content(res)
     structure(res, class = c('rx_studio_report', class(res)))
+
 }
 
 
