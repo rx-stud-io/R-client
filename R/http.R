@@ -50,7 +50,14 @@ simulate <- function(endpoint, ...) {
 #' @export
 #' @importFrom utils browseURL
 print.rx_studio_report <- function(x, ...) {
+
     t <- tempfile(fileext = '.html')
     cat(as.character(x), file = t)
-    browseURL(file.path('file:/', t))
+
+    viewer <- getOption('viewer')
+    if (!is.null(viewer)) {
+        viewer(t)
+    } else {
+        browseURL(file.path('file:/', t))
+    }
 }
