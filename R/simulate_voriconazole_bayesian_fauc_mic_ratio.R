@@ -6,7 +6,7 @@
 #' Voriconazole
 #' 
 #' \strong{Method}:
-#' Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
+#' Estimate the pharmacokinetic parameters of the patient from past concentrations with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 #' 
 #' \strong{PK/PD target}:
 #' 24 hour area under the free concentration-time curve to minimum inhibitory concentration ratio.
@@ -20,7 +20,7 @@
 #' @param RIFAMPICIN Concurrent rifampicin. Presence of rifampicin coadministration. Must be provided as string ('No' or 'Yes').
 #' @param SEVEREHEPATICCHOLESTASIS Severe hepatic cholestasis. Severe hepatic cholestasis is defined as any liver function tests > 20 times the upper limit of normal (e.g. alkaline phosphatase, AST, ALT or GGT). Must be provided as string ('No' or 'Yes').
 #' @param AUCPERMIC AUC to MIC ratio target. The PK/PD target can be provided as 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio (AUC/MIC). Must be provided as numeric (min. 10, max. 2000 ).
-#' @param ORALORIVBAREHISTORY Historical Records.  Must be provided as list of 2-24 'HISTDOSE', 'HISTORALDOSE' or 'HISTCONCENTRATION' values.
+#' @param ORALORIVBAREHISTORY Historical Records.  Must be provided as list of 2-48 'HISTDOSE', 'HISTORALDOSE' or 'HISTCONCENTRATION' values.
 #' @param ORALORIVORKGREGIMENS Dosing Regimens. List of dosing regimens to be used in simulating target attainment, from which the dosing regimen with the smallest absolute difference from the desired target will be automatically selected. Must be provided as list of 1-20 'KGREGIMEN', 'REGIMEN' or 'ORALREGIMEN' values. Use the \code{regimen} helper function to define the REGIMEN values.
 #' 
 #' @examples \dontrun{

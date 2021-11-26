@@ -1,3 +1,11 @@
+# RxStudio 2021-11-25 
+
+Initial release. 
+
+Affected simulation endpoints:
+
+* phenytoin_bay_ncmin 
+
 # RxStudio 2021-10-15 
 
 Initial release. 

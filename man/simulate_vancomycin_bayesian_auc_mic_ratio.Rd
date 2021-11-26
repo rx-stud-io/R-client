@@ -40,7 +40,7 @@ simulate_vancomycin_bayesian_auc_mic_ratio(
 
 \item{CRCLCAP}{Capping Creatinine Clearance. Whether to use capping for creatinine clearance. Must be provided as string ('No cap', '120 ml/min', '130 ml/min', '140 ml/min' or '150 ml/min').}
 
-\item{HISTORY}{Historical Records.  Must be provided as list of 3-24 'HISTCREATININE', 'HISTDOSE' or 'HISTCONCENTRATION' values.}
+\item{HISTORY}{Historical Records.  Must be provided as list of 3-48 'HISTCREATININE', 'HISTDOSE' or 'HISTCONCENTRATION' values.}
 
 \item{REGIMENS}{Dosing Regimens. List of dosing regimens to be used in simulating target attainment, from which the dosing regimen with the smallest absolute difference from the desired target will be automatically selected. Must be provided as list of 1-20 'REGIMEN' values. Use the \code{regimen} helper function to define the REGIMEN values.}
 }
@@ -52,7 +52,7 @@ Vancomycin » Bayesian adaptive dosing » AUC to MIC ratio
 Vancomycin
 
 \strong{Method}:
-Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
+Estimate the pharmacokinetic parameters of the patient from past concentrations with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 
 \strong{PK/PD target}:
 24 hour area under the concentration-time curve to minimum inhibitory concentration ratio.

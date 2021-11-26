@@ -37,7 +37,7 @@ simulate_voriconazole_bayesian_cmin_mic_ratio(
 
 \item{CMINPERMIC}{Minimum concentration to MIC ratio target. The PK/PD target can be provided as minimum concentration to minimum inhibitory concentration ratio (Cmin/MIC). Must be provided as numeric (min. 0.1, max. 50 ).}
 
-\item{ORALORIVBAREHISTORY}{Historical Records.  Must be provided as list of 2-24 'HISTDOSE', 'HISTORALDOSE' or 'HISTCONCENTRATION' values.}
+\item{ORALORIVBAREHISTORY}{Historical Records.  Must be provided as list of 2-48 'HISTDOSE', 'HISTORALDOSE' or 'HISTCONCENTRATION' values.}
 
 \item{ORALORIVORKGREGIMENS}{Dosing Regimens. List of dosing regimens to be used in simulating target attainment, from which the dosing regimen with the smallest absolute difference from the desired target will be automatically selected. Must be provided as list of 1-20 'KGREGIMEN', 'REGIMEN' or 'ORALREGIMEN' values. Use the \code{regimen} helper function to define the REGIMEN values.}
 }
@@ -49,7 +49,7 @@ Voriconazole » Bayesian adaptive dosing » Total minimum concentration to MIC r
 Voriconazole
 
 \strong{Method}:
-Estimate the pharmacokinetic parameters of the patient from past concentrations and creatinine levels with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
+Estimate the pharmacokinetic parameters of the patient from past concentrations with Bayesian inverse modeling, then use that information to predict the steady state concentrations for multiple dosing regimens and select the optimal one, with regard to the target pharmacodynamic index.
 
 \strong{PK/PD target}:
 Minimum concentration (mg/L) to minimum inhibitory concentration ratio (mg/L).
